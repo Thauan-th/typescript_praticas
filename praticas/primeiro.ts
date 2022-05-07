@@ -24,3 +24,6 @@ function toggle(toggle:boolean){
 upperName(nome)
 multPer2(numero)
 toggle(ligado)
+//
+let text_annotation:string = 'Annotation'
+let text_infererence = "Inference" 
