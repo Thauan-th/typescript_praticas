@@ -37,3 +37,15 @@ function showNumbers(a:number,b:number,c?:number ){
 }
 showNumbers(10,20,30)
 showNumbers(10,20)
+
+let both_values: string | number = 10000
+both_values = '10000'
+
+function showTotal(total: string|number){
+    return `O total foi de ${total}`
+}
+
+console.log(showTotal(both_values))
+
+
+

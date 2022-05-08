@@ -30,3 +30,9 @@ function showNumbers(a, b, c) {
 }
 showNumbers(10, 20, 30);
 showNumbers(10, 20);
+var both_values = 10000;
+both_values = '10000';
+function showTotal(total) {
+    return "O total foi de ".concat(total);
+}
+console.log(showTotal(both_values));
