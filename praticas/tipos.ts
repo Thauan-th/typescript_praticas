@@ -42,8 +42,12 @@ let both_values: string | number = 10000
 both_values = '10000'
 
 function showTotal(total: string|number){
-    return `O total foi de ${total}`
+    if(typeof total === "string"){
+        return  `O total foi de ${total} , string`
+    }
+    return `O total foi de ${total} , number`
 }
+const  both_types_array : Array<string | number> = [31,'Janeiro',2003]
 
 console.log(showTotal(both_values))
 

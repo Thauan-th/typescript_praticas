@@ -33,6 +33,10 @@ showNumbers(10, 20);
 var both_values = 10000;
 both_values = '10000';
 function showTotal(total) {
-    return "O total foi de ".concat(total);
+    if (typeof total === "string") {
+        return "O total foi de ".concat(total, " , string");
+    }
+    return "O total foi de ".concat(total, " , number");
 }
+var both_types_array = [31, 'Janeiro', 2003];
 console.log(showTotal(both_values));
