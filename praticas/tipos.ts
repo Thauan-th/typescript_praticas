@@ -21,9 +21,6 @@ const prices_obj = {
 function sumOfPrices(prices: {prices:number[]}){
     return prices.prices.reduce((prev,current)=>prev+current ,0)
 }
-
-console.log(sumOfPrices(prices_obj))
-
 const coord = {
     x : 90 ,
     y : 22222.22
@@ -32,3 +29,11 @@ function showCoords(coord : {x:number,y:number}){
     console.log(`Coordenada ${coord.x} e ${coord.y}`)
 }
 showCoords(coord)
+
+function showNumbers(a:number,b:number,c?:number ){
+    console.log("A" + a)
+    console.log("B" + b)
+    c && console.log("C" +  c)
+}
+showNumbers(10,20,30)
+showNumbers(10,20)

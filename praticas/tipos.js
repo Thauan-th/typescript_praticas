@@ -15,7 +15,6 @@ var prices_obj = {
 function sumOfPrices(prices) {
     return prices.prices.reduce(function (prev, current) { return prev + current; }, 0);
 }
-console.log(sumOfPrices(prices_obj));
 var coord = {
     x: 90,
     y: 22222.22
@@ -24,3 +23,10 @@ function showCoords(coord) {
     console.log("Coordenada ".concat(coord.x, " e ").concat(coord.y));
 }
 showCoords(coord);
+function showNumbers(a, b, c) {
+    console.log("A" + a);
+    console.log("B" + b);
+    c && console.log("C" + c);
+}
+showNumbers(10, 20, 30);
+showNumbers(10, 20);
