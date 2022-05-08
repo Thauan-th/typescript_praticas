@@ -13,4 +13,22 @@ let num2:number =20
 function sum(num:number,num2:number):number{
     return num + num2
 }
-console.log(sum(num,num2))
+
+const prices_obj = {
+    prices : [10,20,30,40,50,60,7,2]
+}
+
+function sumOfPrices(prices: {prices:number[]}){
+    return prices.prices.reduce((prev,current)=>prev+current ,0)
+}
+
+console.log(sumOfPrices(prices_obj))
+
+const coord = {
+    x : 90 ,
+    y : 22222.22
+}
+function showCoords(coord : {x:number,y:number}){
+    console.log(`Coordenada ${coord.x} e ${coord.y}`)
+}
+showCoords(coord)

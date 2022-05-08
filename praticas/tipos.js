@@ -9,4 +9,18 @@ var num2 = 20;
 function sum(num, num2) {
     return num + num2;
 }
-console.log(sum(num, num2));
+var prices_obj = {
+    prices: [10, 20, 30, 40, 50, 60, 7, 2]
+};
+function sumOfPrices(prices) {
+    return prices.prices.reduce(function (prev, current) { return prev + current; }, 0);
+}
+console.log(sumOfPrices(prices_obj));
+var coord = {
+    x: 90,
+    y: 22222.22
+};
+function showCoords(coord) {
+    console.log("Coordenada ".concat(coord.x, " e ").concat(coord.y));
+}
+showCoords(coord);
