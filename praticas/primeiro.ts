@@ -26,4 +26,5 @@ multPer2(numero)
 toggle(ligado)
 //
 let text_annotation:string = 'Annotation'
-let text_infererence = "Inference" 
+let text_infererence = "Inference"
+//

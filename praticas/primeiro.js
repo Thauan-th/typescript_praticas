@@ -20,3 +20,7 @@ function toggle(toggle) {
 upperName(nome);
 multPer2(numero);
 toggle(ligado);
+//
+var text_annotation = 'Annotation';
+var text_infererence = "Inference";
+//
