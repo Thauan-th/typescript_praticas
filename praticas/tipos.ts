@@ -51,5 +51,30 @@ const  both_types_array : Array<string | number> = [31,'Janeiro',2003]
 
 console.log(showTotal(both_values))
 
+//
+class User {
+    name:string ;
+    constructor(name: string){
+        this.name = name
+    }
+}
+class SuperUser extends User {
+    
+    constructor(name: string){
+        super(name)
+    }
+}
 
+const normal = new User('normal')
+const super_user = new SuperUser('super-usuario')
 
+function olaUsuario(usuario: object){
+    if(usuario instanceof SuperUser){
+        console.log('Bem vindo ADM')
+        return 1
+    }
+    console.log('Bem vindo usuario')
+    return 0
+}
+olaUsuario(normal)
+olaUsuario(super_user)
