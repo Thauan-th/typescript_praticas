@@ -73,11 +73,34 @@ var normal = new User('normal');
 var super_user = new SuperUser('super-usuario');
 function olaUsuario(usuario) {
     if (usuario instanceof SuperUser) {
-        console.log('Bem vindo ADM');
+        console.log('Diferenciando objetos com [instanceof]');
         return 1;
     }
-    console.log('Bem vindo usuario');
+    console.log('Objetos trabalham com referencias , entao nunca sao iguais . Mesmo contendo as mesmas propriedades');
+    console.log('Objetos são iguais quando compartilham a mesma instacia');
     return 0;
 }
 olaUsuario(normal);
 olaUsuario(super_user);
+var Cachorro = /** @class */ (function () {
+    function Cachorro(nome, raca) {
+        this.nome = nome;
+        if (raca)
+            this.raca = raca;
+    }
+    return Cachorro;
+}());
+var vira_lata = new Cachorro('TOTO');
+var puddle = new Cachorro('Let', 'Puddle');
+function detalhesCachorro(cachorro) {
+    if ('raca' in cachorro) {
+        console.log(cachorro.raca);
+        return 1;
+    }
+    console.log('Vira-lata');
+    return 0;
+}
+detalhesCachorro(vira_lata);
+if (detalhesCachorro(puddle)) {
+    console.log('Cachorro com raça');
+}
